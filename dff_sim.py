@@ -2,7 +2,7 @@ from random import randrange
 from myhdl import *
 from dff import dff
 
-@block
+
 def test_dff():
 
     q, d, clk = [Signal(bool(0)) for i in range(3)]
@@ -13,7 +13,7 @@ def test_dff():
     def clkgen():
         clk.next = not clk
 
-        
+
     @always(clk.negedge)
     def stimulus():
         d.next = randrange(2)

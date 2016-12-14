@@ -1,28 +1,15 @@
 from myhdl import *
 from random import randrange
-import and_gate as and_gate
+from and_gate import *
+a, b, c, d = [Signal(intbv(0)) for i in range(4)]
+and_inst = three_input_and(a, b, c, d)
 
 def test_and():
+    print "a b c | d"
+    for i in range (10):
+        a.next, b.next, c.next = randrange(2), randrange(2) ,randrange(2)
+        yield delay(10)
+        print "%s %s %s | %s" % (a, b, c, d)
 
-    a, b, c, clk = [Signal(bool(0)) for i in range(4)]
-
-    and_inst = and_gate.two_input_and(a, b, c, clk)
-
-    @always(delay(10))
-    def clkgen():
-        clk.next = not clk
-
-    @always(clk.negedge)
-    def stimulus():
-        a = randrange(2)
-        b = randrange(3)
-
-    return and_inst, clkgen, stimulus
-
-
-def simulate(timesteps):
-    tb = traceSignals(test_and)
-    sim = Simulation(tb)
-    sim.run(timesteps)
-
-simulate(2000)
+test_1 = test_and()
+sim = Simulation(and_inst, test_1).run()
