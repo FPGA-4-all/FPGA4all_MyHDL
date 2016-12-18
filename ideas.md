@@ -12,6 +12,7 @@ use qt for python gui dev
 
 
 #12/25
+
 ##have all basic logic implemented in pymtl
 * not
 * buffer
@@ -21,6 +22,7 @@ use qt for python gui dev
 * xor
 * nor
 * xnor
+
 ##have other combinational building blocks implemented
 * multiplexers
 * half adder
@@ -33,14 +35,21 @@ use qt for python gui dev
 * Rotator
 * Multiplier
 * Counter
+
 #1/1
+
 ##have basic synchronous logic design implemented
 * SR Latch
 * D Latch
 * Enabled Flip Flop
 * Resetable Flip Flop
+
 ##implement single-cycle processor
+
 #1/8
+
 ##Start on GUI development
+
 #1/15
+
 ##contintue GUI development
