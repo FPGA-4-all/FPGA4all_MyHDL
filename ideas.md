@@ -12,14 +12,13 @@ use qt for python gui dev
 
 
 12/25 ->  have all basic logic implemented in pymtl
-            not
-            buffer
-            and
-            or
-            nand
-            xor
-            nor
-            xnor
+            * not
+            * buffer
+            * and
+            * or
+            * nand
+            * xor
+            * nor
+            * xnor
 
-          implement mux, adder
 12/
