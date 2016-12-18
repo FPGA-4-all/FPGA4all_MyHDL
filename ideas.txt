@@ -1,4 +1,0 @@
-fpga quad copter that follows your bluetooth phone. This means it can follow you.
-
-use qt for python gui dev
-

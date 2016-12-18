@@ -10,6 +10,8 @@ def half_adder(a, b, s, c):
     """
     @always_comb
     def half_add():
-        s.next = two_input_xor(a, b)
-        c.next = two_input_and(a, b)
+        s.next = a^b
+        c.next = a&b
+        #two_input_xor(a, b, s)
+        #two_input_and(a, b, c)
     return half_add
