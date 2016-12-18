@@ -4,4 +4,3 @@ def dff(q, d, clk):
   def logic():
     q.next = d
   return logic
-
