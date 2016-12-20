@@ -1,10 +1,11 @@
 from myhdl import *
 from random import randrange
-from and_gate import *
+from and_gate import and_gate
 import pytest
+and_gates = and_gate()
 
 a, b, c, d = [Signal(intbv(0)) for i in range(4)]
-and_inst = three_input_and(a, b, c, d)
+and_inst = and_gates.three_input_and(a, b, c, d)
 
 def test_and():
     #print "a b c | d"
