@@ -14,6 +14,6 @@ def half_adder(a, b, s, c):
     def half_add():
         #s.next = a^b
         #c.next = a&b
-        xor_gates.two_input_xor(a, b, s.next)
-        and_gates.two_input_and(a, b, c.next)
+        xor_gates.two_input_xor(a, b, s)
+        and_gates.two_input_and(a, b, c)
     return half_add
