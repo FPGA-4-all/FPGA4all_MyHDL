@@ -22,3 +22,4 @@ class xor_gate:
         def xor_logic():
             d.next = a ^ b ^ c
         return xor_logic
+x
