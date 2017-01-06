@@ -10,10 +10,10 @@ def half_adder(a, b, s, c):
         s       -> sum
         c       -> overflow
     """
-    @always_comb
-    def half_add():
-        #s.next = a^b
-        #c.next = a&b
-        xor_gates.two_input_xor(a, b, s)
-        and_gates.two_input_and(a, b, c)
-    return half_add
+
+    #s.next = a^b
+    #c.next = a&b
+    xor_out = xor_gates.two_input_xor(a, b, s)
+    and_out = and_gates.two_input_and(a, b, c)
+
+    return xor_out, and_out
