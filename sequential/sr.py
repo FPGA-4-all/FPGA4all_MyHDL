@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from ..logic import and_gate
+from and_gate import two_input_and
 # if __name__ == '__main__':
 #     if __package__ is None:
 #         import sys
